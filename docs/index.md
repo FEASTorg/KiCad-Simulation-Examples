@@ -5,5 +5,4 @@ This is a collection of examples to display KiCad's integrated simulation capabi
 ## Contents
 
 - [Introduction To Simulations](introduction_to_simulations.md)
-- [Test](test.md)
 
