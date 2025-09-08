@@ -1,3 +1,3 @@
-# Welcome to KiCad Example Simulations!
+# Docs
 
-This is a collection of examples to display KiCad's integrated simulation capabilties. This builds off of the fantastic: [OJStuff/Schematics-Examples](https://github.com/OJStuff/Schematics-Examples).
+This is where the docs are kept!
