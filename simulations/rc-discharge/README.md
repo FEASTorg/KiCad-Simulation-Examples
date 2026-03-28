@@ -1,17 +1,21 @@
-# Rc Discharge
+# RC Discharge
 
-Short description of this simulation.
+Demonstrates RC capacitor discharging behavior.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+A capacitor discharges through a resistor after a step change.
+
+## Expected Behavior
+
+- Capacitor voltage decays exponentially to zero.
 
 ## How To Run
 
-1. Open `rc-discharge.kicad_sch` in KiCad.
+1. Open `RC-Discharge.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Time constant τ = RC controls the decay.

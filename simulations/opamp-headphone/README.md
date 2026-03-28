@@ -1,17 +1,21 @@
-# Opamp Headphone
+# Op-Amp Headphone
 
-Short description of this simulation.
+Demonstrates an op-amp headphone amplifier stage.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+The op-amp is configured for low-distortion voltage gain into a load.
+
+## Expected Behavior
+
+- Output tracks the input with the configured gain and minimal clipping.
 
 ## How To Run
 
-1. Open `opamp-headphone.kicad_sch` in KiCad.
+1. Open `OPamp-headphone.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Check load current and output swing limits.

@@ -1,17 +1,22 @@
-# Lc Series Resonance
+# LC Series Resonance
 
-Short description of this simulation.
+Demonstrates series LC resonance and its low-impedance point at resonance.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+An inductor and capacitor are placed in series with an AC source and load.
+
+## Expected Behavior
+
+- AC sweep shows a minimum impedance at the resonant frequency.
+- Voltage across the reactive elements peaks near resonance.
 
 ## How To Run
 
-1. Open `lc-series-resonance.kicad_sch` in KiCad.
+1. Open `LC-Series-resonance.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Watch for phase change around the resonant frequency.

@@ -1,17 +1,21 @@
-# Rc Highpass
+# RC Highpass
 
-Short description of this simulation.
+Demonstrates a first-order RC high-pass filter.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+A series capacitor feeds a resistor to ground; the output is across the resistor.
+
+## Expected Behavior
+
+- AC sweep shows attenuation at low frequencies and pass-through at high frequencies.
 
 ## How To Run
 
-1. Open `rc-highpass.kicad_sch` in KiCad.
+1. Open `RC-Highpass.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Increase R or C to lower the cutoff frequency.

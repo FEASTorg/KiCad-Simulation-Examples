@@ -1,17 +1,21 @@
-# Rectifier 4D Zener Npn
+# Rectifier 4d Zener NPN
 
-Short description of this simulation.
+Demonstrates a rectifier with zener reference and NPN regulation.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+A zener diode sets a reference, and an NPN transistor regulates the output.
+
+## Expected Behavior
+
+- Output voltage clamps around the zener setpoint.
 
 ## How To Run
 
-1. Open `rectifier-4d-zener-npn.kicad_sch` in KiCad.
+1. Open `Rectifier-4D-Zener-NPN.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Check how load affects zener current and regulation.

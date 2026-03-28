@@ -1,17 +1,21 @@
-# Rl Voltage Current
+# RL Voltage Current
 
-Short description of this simulation.
+Demonstrates the relationship between voltage and current in an RL network.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+A step input is applied to an inductor through a resistor.
+
+## Expected Behavior
+
+- Inductor current ramps linearly at first and approaches steady state.
 
 ## How To Run
 
-1. Open `rl-voltage-current.kicad_sch` in KiCad.
+1. Open `RL-Voltage-Current.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Time constant τ = L/R controls the rise time.

@@ -1,17 +1,21 @@
-# Opamp Voltage Follower
+# Op-Amp Voltage Follower
 
-Short description of this simulation.
+Demonstrates an op-amp voltage follower (buffer).
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+The op-amp output is tied to the inverting input for unity gain.
+
+## Expected Behavior
+
+- Output follows input closely with minimal loading.
 
 ## How To Run
 
-1. Open `opamp-voltage-follower.kicad_sch` in KiCad.
+1. Open `OPamp-voltage-follower.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Observe input/output impedance effects.

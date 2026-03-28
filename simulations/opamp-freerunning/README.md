@@ -1,17 +1,21 @@
-# Opamp Freerunning
+# Op-Amp Freerunning
 
-Short description of this simulation.
+Demonstrates a free-running op-amp oscillator.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+Positive feedback and RC timing create a relaxation oscillator.
+
+## Expected Behavior
+
+- Output is a square/triangle-like waveform with a predictable period.
 
 ## How To Run
 
-1. Open `opamp-freerunning.kicad_sch` in KiCad.
+1. Open `OPamp-freerunning.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Change RC values to adjust oscillation frequency.

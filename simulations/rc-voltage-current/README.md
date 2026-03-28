@@ -1,17 +1,21 @@
-# Rc Voltage Current
+# RC Voltage Current
 
-Short description of this simulation.
+Demonstrates the relationship between voltage and current in an RC network.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+A known input waveform is applied across an RC element to observe current vs. voltage.
+
+## Expected Behavior
+
+- Current leads voltage across the capacitor during transitions.
 
 ## How To Run
 
-1. Open `rc-voltage-current.kicad_sch` in KiCad.
+1. Open `RC-Voltage-Current.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Compare I = C·dV/dt to the simulated current waveform.

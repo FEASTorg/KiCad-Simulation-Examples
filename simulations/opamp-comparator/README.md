@@ -1,17 +1,21 @@
-# Opamp Comparator
+# Op-Amp Comparator
 
-Short description of this simulation.
+Demonstrates an op-amp used as a comparator.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+The op-amp compares an input signal against a reference threshold.
+
+## Expected Behavior
+
+- Output saturates high/low as the input crosses the threshold.
 
 ## How To Run
 
-1. Open `opamp-comparator.kicad_sch` in KiCad.
+1. Open `OPamp-comparator.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Add hysteresis if you want cleaner switching.

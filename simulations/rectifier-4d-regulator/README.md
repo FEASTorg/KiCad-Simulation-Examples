@@ -1,17 +1,21 @@
-# Rectifier 4D Regulator
+# Rectifier 4d Regulator
 
-Short description of this simulation.
+Demonstrates a rectifier feeding a regulator stage.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+A bridge rectifier feeds a linear regulator to produce a steadier DC output.
+
+## Expected Behavior
+
+- Output voltage is regulated despite input ripple.
 
 ## How To Run
 
-1. Open `rectifier-4d-regulator.kicad_sch` in KiCad.
+1. Open `Rectifier-4D-Regulator.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Check dropout behavior at lower input peaks.

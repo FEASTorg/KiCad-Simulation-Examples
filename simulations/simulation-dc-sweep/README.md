@@ -1,17 +1,21 @@
-# Simulation Dc Sweep
+# Simulation DC Sweep
 
-Short description of this simulation.
+Demonstrates DC sweep analysis.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+A source is swept across a range while the output is monitored.
+
+## Expected Behavior
+
+- Output curves show how the circuit responds to the swept parameter.
 
 ## How To Run
 
-1. Open `simulation-dc-sweep.kicad_sch` in KiCad.
+1. Open `Simulation-DC-sweep.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Use smaller steps for smoother curves.

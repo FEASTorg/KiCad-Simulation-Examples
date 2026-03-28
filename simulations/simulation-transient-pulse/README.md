@@ -1,17 +1,21 @@
 # Simulation Transient Pulse
 
-Short description of this simulation.
+Demonstrates transient analysis with a pulse source.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+A pulsed input drives a simple network to observe time-domain response.
+
+## Expected Behavior
+
+- Waveforms show rise/fall behavior and time constants.
 
 ## How To Run
 
-1. Open `simulation-transient-pulse.kicad_sch` in KiCad.
+1. Open `Simulation-Transient-pulse.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Adjust pulse width and period to explore settling behavior.

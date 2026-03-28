@@ -1,17 +1,21 @@
 # Transformer 1P 1S
 
-Short description of this simulation.
+Demonstrates a basic transformer with one primary and one secondary.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+A coupled inductor model represents the transformer windings.
+
+## Expected Behavior
+
+- Secondary voltage scales with the turns ratio and coupling coefficient.
 
 ## How To Run
 
-1. Open `transformer-1p-1s.kicad_sch` in KiCad.
+1. Open `Transformer-1P-1S.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Adjust coupling (K) to see leakage effects.

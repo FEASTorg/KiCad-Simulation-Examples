@@ -1,17 +1,22 @@
-# Lc Parallell Resonance
+# LC Parallell Resonance
 
-Short description of this simulation.
+Demonstrates parallel LC resonance and its high-impedance peak at resonance.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+An inductor and capacitor are placed in parallel across an AC source.
+
+## Expected Behavior
+
+- AC sweep shows a sharp impedance peak at the resonant frequency.
+- Current draw is minimized near resonance.
 
 ## How To Run
 
-1. Open `lc-parallell-resonance.kicad_sch` in KiCad.
+1. Open `LC-Parallell-resonance.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Adjust L and C to move the resonant frequency.

@@ -1,17 +1,21 @@
-# Rectifier 4D Regulator Npn
+# Rectifier 4d Regulator NPN
 
-Short description of this simulation.
+Demonstrates a rectifier feeding an NPN pass regulator.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+Rectified DC is smoothed and regulated by an NPN pass transistor stage.
+
+## Expected Behavior
+
+- Output voltage stabilizes with reduced ripple.
 
 ## How To Run
 
-1. Open `rectifier-4d-regulator-npn.kicad_sch` in KiCad.
+1. Open `Rectifier-4D-Regulator-NPN.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Observe regulation limits at higher load currents.

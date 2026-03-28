@@ -1,17 +1,21 @@
-# Rectifier 4D Regulator Pnp
+# Rectifier 4d Regulator PNP
 
-Short description of this simulation.
+Demonstrates a rectifier feeding a PNP pass regulator.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+Rectified DC is regulated using a PNP pass element.
+
+## Expected Behavior
+
+- Output voltage stabilizes with reduced ripple.
 
 ## How To Run
 
-1. Open `rectifier-4d-regulator-pnp.kicad_sch` in KiCad.
+1. Open `Rectifier-4D-Regulator-PNP.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Compare efficiency and dropout vs. NPN variant.

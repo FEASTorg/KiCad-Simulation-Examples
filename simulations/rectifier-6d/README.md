@@ -1,17 +1,21 @@
-# Rectifier 6D
+# Rectifier 6d
 
-Short description of this simulation.
+Demonstrates a three-phase bridge rectifier using six diodes.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+Three-phase AC is rectified into a higher-frequency pulsating DC output.
+
+## Expected Behavior
+
+- Ripple frequency is higher and amplitude lower than single-phase rectifiers.
 
 ## How To Run
 
-1. Open `rectifier-6d.kicad_sch` in KiCad.
+1. Open `Rectifier-6D.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Compare output ripple to the 4-diode bridge example.

@@ -1,17 +1,21 @@
 # Transformer 1P 2S
 
-Short description of this simulation.
+Demonstrates a transformer with one primary and two secondary windings.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+A coupled inductor model provides two separate secondary outputs.
+
+## Expected Behavior
+
+- Each secondary scales with its own turns ratio.
 
 ## How To Run
 
-1. Open `transformer-1p-2s.kicad_sch` in KiCad.
+1. Open `Transformer-1P-2S.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Observe phase relationships between secondaries.

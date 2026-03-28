@@ -1,17 +1,21 @@
-# Rc Charge
+# RC Charge
 
-Short description of this simulation.
+Demonstrates RC capacitor charging behavior.
 
-## What It Demonstrates
+## Circuit Summary
 
-- [Add key concept]
-- [Add key concept]
+A step input charges a capacitor through a resistor.
+
+## Expected Behavior
+
+- Capacitor voltage rises exponentially toward the final value.
 
 ## How To Run
 
-1. Open `rc-charge.kicad_sch` in KiCad.
+1. Open `RC-Charge.kicad_sch` in KiCad.
 2. Click `Simulate` and run the configured analyses.
+3. Add probes to the key nodes to view the expected behavior.
 
 ## Notes
 
-- [Add any important modeling notes or assumptions]
+- Time constant τ = RC controls the rise time.
