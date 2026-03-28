@@ -18,7 +18,8 @@ ASSETS_ROOT = DOCS_ROOT / "assets" / "simulations"
 SITE_TITLE = "KiCad Simulation Examples"
 SIM_SECTION_TITLE = "Simulations"
 REPO_URL = "https://github.com/FEASTorg/KiCad-Simulation-Examples"
-DOWNLOAD_ZIP = "{{ site.baseurl }}/assets/downloads/schematics.zip"
+DOWNLOAD_PDF_ZIP = "{{ site.baseurl }}/assets/downloads/schematics-pdf.zip"
+DOWNLOAD_KIT_ZIP = "{{ site.baseurl }}/assets/downloads/schematics-kit.zip"
 
 H1_RE = re.compile(r"^\s{0,3}#\s+(.+?)\s*$")
 
@@ -56,7 +57,8 @@ def write_text(path: Path, content: str) -> None:
 
 def render_sim_page(sim_name: str, title: str, body: str) -> str:
     image_path = f"{{{{ site.baseurl }}}}/assets/simulations/{sim_name}/schematic.png"
-    download_path = DOWNLOAD_ZIP
+    download_pdf = DOWNLOAD_PDF_ZIP
+    download_kit = DOWNLOAD_KIT_ZIP
     repo_link = f"{REPO_URL}/tree/main/simulations/{sim_name}"
     return (
         "---\n"
@@ -66,7 +68,8 @@ def render_sim_page(sim_name: str, title: str, body: str) -> str:
         f"grand_parent: {SITE_TITLE}\n"
         "---\n\n"
         "<!-- AUTO-GENERATED: DO NOT EDIT BY HAND -->\n\n"
-        f"> Download all schematics: [{download_path}]({download_path})\n\n"
+        f"> Download all schematics as PDFs: [{download_pdf}]({download_pdf})\n"
+        f"> Or take the full kit with you (PDF + KiCad schematic + README): [{download_kit}]({download_kit})\n\n"
         f"![Schematic]({image_path})\n\n"
         f"[Open project folder on GitHub]({repo_link})\n\n"
         f"{body}\n"
@@ -88,7 +91,8 @@ def render_sim_index(items: list[tuple[str, str, str]]) -> str:
         "Browse individual simulation pages below. Each page includes a schematic and a short",
         "explanation of what the circuit demonstrates.",
         "",
-        f"Download all schematics as a zip: [{DOWNLOAD_ZIP}]({DOWNLOAD_ZIP})",
+        f"Download all schematics as PDFs: [{DOWNLOAD_PDF_ZIP}]({DOWNLOAD_PDF_ZIP})",
+        f"Or take the full kit with you (PDF + KiCad schematic + README): [{DOWNLOAD_KIT_ZIP}]({DOWNLOAD_KIT_ZIP})",
         "",
         "Want to contribute a new simulation? See the contributor guide:",
         "[Contributing a Simulation](../contributing/).",
@@ -124,7 +128,8 @@ def render_site_index(items: list[tuple[str, str, str]]) -> str:
         "",
         intro,
         "",
-        f"Download all schematics as a zip: [{DOWNLOAD_ZIP}]({DOWNLOAD_ZIP})",
+        f"Download all schematics as PDFs: [{DOWNLOAD_PDF_ZIP}]({DOWNLOAD_PDF_ZIP})",
+        f"Or take the full kit with you (PDF + KiCad schematic + README): [{DOWNLOAD_KIT_ZIP}]({DOWNLOAD_KIT_ZIP})",
         "",
         "Contributing a new simulation? See:",
         "[Contributing a Simulation](contributing/).",

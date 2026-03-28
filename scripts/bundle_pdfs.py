@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SIM_ASSETS = ROOT / "docs" / "assets" / "simulations"
 OUT_DIR = ROOT / "docs" / "assets" / "downloads"
-OUT_ZIP = OUT_DIR / "schematics.zip"
+OUT_ZIP = OUT_DIR / "schematics-pdf.zip"
 
 
 def die(message: str) -> None:
