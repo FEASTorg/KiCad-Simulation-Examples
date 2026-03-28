@@ -18,6 +18,7 @@ ASSETS_ROOT = DOCS_ROOT / "assets" / "simulations"
 SITE_TITLE = "KiCad Simulation Examples"
 SIM_SECTION_TITLE = "Simulations"
 REPO_URL = "https://github.com/FEASTorg/KiCad-Simulation-Examples"
+DOWNLOAD_ZIP = "{{ site.baseurl }}/assets/downloads/schematics.zip"
 
 H1_RE = re.compile(r"^\s{0,3}#\s+(.+?)\s*$")
 
@@ -54,7 +55,8 @@ def write_text(path: Path, content: str) -> None:
 
 
 def render_sim_page(sim_name: str, title: str, body: str) -> str:
-    image_path = f"../../assets/simulations/{sim_name}/schematic.png"
+    image_path = f"{{{{ site.baseurl }}}}/assets/simulations/{sim_name}/schematic.png"
+    download_path = DOWNLOAD_ZIP
     repo_link = f"{REPO_URL}/tree/main/simulations/{sim_name}"
     return (
         "---\n"
@@ -64,6 +66,7 @@ def render_sim_page(sim_name: str, title: str, body: str) -> str:
         f"grand_parent: {SITE_TITLE}\n"
         "---\n\n"
         "<!-- AUTO-GENERATED: DO NOT EDIT BY HAND -->\n\n"
+        f"> Download all schematics: [{download_path}]({download_path})\n\n"
         f"![Schematic]({image_path})\n\n"
         f"[Open project folder on GitHub]({repo_link})\n\n"
         f"{body}\n"
@@ -82,12 +85,18 @@ def render_sim_index(items: list[tuple[str, str, str]]) -> str:
         "",
         "<!-- AUTO-GENERATED: DO NOT EDIT BY HAND -->",
         "",
-        "Browse individual simulation pages below.",
+        "Browse individual simulation pages below. Each page includes a schematic and a short",
+        "explanation of what the circuit demonstrates.",
+        "",
+        f"Download all schematics as a zip: [{DOWNLOAD_ZIP}]({DOWNLOAD_ZIP})",
+        "",
+        "Want to contribute a new simulation? See the contributor guide:",
+        "[Contributing a Simulation](../contributing/).",
         "",
     ]
     for sim_name, title, blurb in items:
-        img = f"<img src=\"/KiCad-Simulation-Examples/assets/simulations/{sim_name}/schematic.png\" width=\"260\" />"
-        link = f"/KiCad-Simulation-Examples/simulations/{sim_name}/"
+        img = f"<img src=\"{{{{ site.baseurl }}}}/assets/simulations/{sim_name}/schematic.png\" width=\"260\" />"
+        link = f"{{{{ site.baseurl }}}}/simulations/{sim_name}/"
         lines.append(f"- [{title}]({link})  ")
         if blurb:
             lines.append(f"  {blurb}")
@@ -115,12 +124,17 @@ def render_site_index(items: list[tuple[str, str, str]]) -> str:
         "",
         intro,
         "",
+        f"Download all schematics as a zip: [{DOWNLOAD_ZIP}]({DOWNLOAD_ZIP})",
+        "",
+        "Contributing a new simulation? See:",
+        "[Contributing a Simulation](contributing/).",
+        "",
         "## Simulations",
         "",
     ]
     for sim_name, title, blurb in items:
-        img = f"<img src=\"assets/simulations/{sim_name}/schematic.png\" width=\"260\" />"
-        link = f"simulations/{sim_name}/"
+        img = f"<img src=\"{{{{ site.baseurl }}}}/assets/simulations/{sim_name}/schematic.png\" width=\"260\" />"
+        link = f"{{{{ site.baseurl }}}}/simulations/{sim_name}/"
         lines.append(f"- [{title}]({link})  ")
         if blurb:
             lines.append(f"  {blurb}")

@@ -40,10 +40,7 @@ jobs:
           fi
 
       - name: Render schematics
-        run: python3 scripts/render_schematics.py
-
-      - name: Generate simulation pages
-        run: python3 scripts/generate_sim_pages.py
+        run: bash scripts/build_docs.sh
 
       - name: Upload generated docs
         uses: actions/upload-artifact@v4

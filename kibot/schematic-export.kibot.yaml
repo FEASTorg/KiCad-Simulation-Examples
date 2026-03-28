@@ -9,3 +9,9 @@ outputs:
     dir: .
     options:
       output: schematic.svg
+  - name: "schematic_pdf"
+    comment: "Schematic export (PDF)"
+    type: pdf_sch_print
+    dir: .
+    options:
+      output: schematic.pdf

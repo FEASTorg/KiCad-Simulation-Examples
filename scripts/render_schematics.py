@@ -64,8 +64,11 @@ def render_sim(sim_dir: Path) -> None:
     )
 
     svg_path = out_dir / "schematic.svg"
+    pdf_path = out_dir / "schematic.pdf"
     if not svg_path.exists():
         die(f"expected output not found: {svg_path}")
+    if not pdf_path.exists():
+        die(f"expected output not found: {pdf_path}")
 
     png_path = out_dir / "schematic.png"
     if shutil.which("rsvg-convert"):
@@ -97,6 +100,29 @@ def main() -> None:
     sim_dirs = sorted(p for p in SIM_ROOT.iterdir() if p.is_dir())
     if not sim_dirs:
         die("no simulation directories found")
+
+    missing_schematics: list[str] = []
+    multi_schematics: list[tuple[str, list[str]]] = []
+    for sim_dir in sim_dirs:
+        sch_files = sorted(sim_dir.glob("*.kicad_sch"))
+        if not sch_files:
+            missing_schematics.append(sim_dir.name)
+            continue
+        if len(sch_files) > 1 and not any(s.stem == sim_dir.name for s in sch_files):
+            multi_schematics.append((sim_dir.name, [s.name for s in sch_files]))
+
+    if missing_schematics or multi_schematics:
+        if missing_schematics:
+            missing = ", ".join(sorted(missing_schematics))
+            print(f"error: missing .kicad_sch in simulations: {missing}", file=sys.stderr)
+        if multi_schematics:
+            for sim, files in multi_schematics:
+                names = ", ".join(files)
+                print(
+                    f"error: multiple schematics in {sim}, none matching dir name: {names}",
+                    file=sys.stderr,
+                )
+        sys.exit(1)
 
     for sim_dir in sim_dirs:
         render_sim(sim_dir)
