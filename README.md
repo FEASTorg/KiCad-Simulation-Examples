@@ -1,13 +1,24 @@
-# KiCad-Simulation-Example
+# KiCad Simulation Examples
 
-## Introduction
+## Overview
 
-This collection of schematic circuits are used as examples by me when teaching my students. They are all ready for easy simulation, with all necessary SPICE-models included. Some circuits are using built-in generic models. There is a PDF of the schematic for each of the circuits, in case you only want the schematic circuit.
+This repository contains a curated set of KiCad schematics used to teach and explore circuit
+simulation concepts. Each simulation includes a short explanation and is ready to run in
+KiCad with included SPICE models where needed.
 
-## Simulation
+Docs site: https://feastorg.github.io/KiCad-Simulation-Examples/
 
-To do a simulation, you access the "Simulate circuit in SPICE" button in the Schematic Editor. Then access "Run/Stop Simulation" button in the "Spice Simulator" window. To show other signals that is set up, you must access the "Add Signals" or "Probe" button. Commands for the simulator are placed just above the title field in the schematic.
+Download bundles:
 
-## Engineering
+- PDFs only: https://feastorg.github.io/KiCad-Simulation-Examples/assets/downloads/schematics-pdf.zip
+- Full kit (PDF + KiCad schematic + README): https://feastorg.github.io/KiCad-Simulation-Examples/assets/downloads/schematics-kit.zip
+
+## How To Run a Simulation
+
+1. Open the `.kicad_sch` file for a simulation in KiCad.
+2. Click **Simulate** to open the simulator.
+3. Run the configured analysis and add probes/signals to plot results.
+
+## Tools
 
 The schematics are made with [KiCad](https://en.wikipedia.org/wiki/KiCad).

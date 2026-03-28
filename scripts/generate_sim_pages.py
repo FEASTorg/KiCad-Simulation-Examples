@@ -83,7 +83,7 @@ def render_sim_index(items: list[tuple[str, str, str]]) -> str:
         f"title: {SIM_SECTION_TITLE}",
         f"parent: {SITE_TITLE}",
         "has_children: true",
-        "nav_order: 2",
+        "nav_order: 3",
         "---",
         "",
         "<!-- AUTO-GENERATED: DO NOT EDIT BY HAND -->",
