@@ -1,0 +1,11 @@
+# KiBot config file for schematic image export
+kibot:
+  version: 1
+
+outputs:
+  - name: "schematic_svg"
+    comment: "Schematic export (SVG)"
+    type: svg_sch_print
+    dir: .
+    options:
+      output: schematic.svg

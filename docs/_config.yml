@@ -1,0 +1,42 @@
+title: KiCad Simulation Examples
+description: >
+  A collection of simulation-ready KiCad schematics used for teaching and reference.
+baseurl: "/KiCad-Simulation-Examples"
+url: "https://feastorg.github.io"
+
+remote_theme: pmarsceill/just-the-docs
+color_scheme: feast # apply FEAST theme assets
+
+aux_links:
+  "← Return to FEASTorg":
+    - "//feastorg.github.io"
+aux_links_new_tab: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: /:path/
+
+exclude:
+  - TODO.md
+  - README.md
+  - index_template.md
+
+# automatically apply layout: page to all docs/*.md
+defaults:
+  - scope:
+      path: "" # everything under docs/
+      type: "pages"
+    values:
+      layout: "page"
+
+just_the_docs:
+  show_nav_level: 2
+  collections:
+    enable: false

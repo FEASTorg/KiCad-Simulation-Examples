@@ -1,0 +1,91 @@
+name: Docs Pipeline
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "simulations/**"
+      - "docs/**"
+      - "scripts/**"
+      - "kibot/**"
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: deploy-docs-site
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad9_auto:latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ensure SVG converter
+        run: |
+          if ! command -v rsvg-convert >/dev/null 2>&1; then
+            if command -v apt-get >/dev/null 2>&1; then
+              apt-get update
+              apt-get install -y librsvg2-bin
+            else
+              echo "rsvg-convert not found and apt-get is unavailable" >&2
+              exit 1
+            fi
+          fi
+
+      - name: Render schematics
+        run: python3 scripts/render_schematics.py
+
+      - name: Generate simulation pages
+        run: python3 scripts/generate_sim_pages.py
+
+      - name: Upload generated docs
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-docs
+          path: docs
+
+  deploy:
+    needs: [generate]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: generated-docs
+          path: _generated_docs
+
+      - name: Sync generated docs
+        run: |
+          rsync -a --delete _generated_docs/ docs/
+
+      - name: Install Python deps
+        run: pip install pyyaml
+
+      - name: Inject FEAST theme assets
+        run: python3 scripts/inject_feast_assets.py
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Build Jekyll site
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
+          destination: ./_site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
