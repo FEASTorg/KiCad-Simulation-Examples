@@ -40,6 +40,6 @@ Custom analysis directives are also supported for advanced use cases.
 ## References
 
 - KiCad Simulation (official overview):
-  - https://www.kicad.org/discover/spice/
+  - [www.kicad.org/discover/spice/](https://www.kicad.org/discover/spice/)
 - ngspice User’s Manual:
-  - http://ngspice.sourceforge.net/docs/ngspice-manual.pdf
+  - [ngspice.sourceforge.net/docs/ngspice-manual.pdf](http://ngspice.sourceforge.net/docs/ngspice-manual.pdf)
