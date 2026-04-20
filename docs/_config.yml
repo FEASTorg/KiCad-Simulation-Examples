@@ -8,7 +8,7 @@ remote_theme: pmarsceill/just-the-docs
 color_scheme: feast # apply FEAST theme assets
 
 aux_links:
-  "← Return to FEASTorg":
+  "← Return to feastorg":
     - "//feastorg.github.io"
 aux_links_new_tab: false
 

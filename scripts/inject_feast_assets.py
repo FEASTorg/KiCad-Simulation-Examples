@@ -16,7 +16,7 @@ import yaml
 
 CONFIG_PATH = Path("docs/_config.yml")
 TEMP_CLONE_DIR = Path("_feast_temp")
-REMOTE_REPO_URL = "https://github.com/FEASTorg/FEASTorg.github.io.git"
+REMOTE_REPO_URL = "https://github.com/feastorg/feastorg.github.io.git"
 WANTED_COLOR_SCHEME = "feast"
 RETRY_ATTEMPTS = 3
 RETRY_DELAY = 5

@@ -17,7 +17,7 @@ ASSETS_ROOT = DOCS_ROOT / "assets" / "simulations"
 
 SITE_TITLE = "KiCad Simulation Examples"
 SIM_SECTION_TITLE = "Simulations"
-REPO_URL = "https://github.com/FEASTorg/KiCad-Simulation-Examples"
+REPO_URL = "https://github.com/feastorg/KiCad-Simulation-Examples"
 DOWNLOAD_PDF_ZIP = "{{ site.baseurl }}/assets/downloads/schematics-pdf.zip"
 DOWNLOAD_KIT_ZIP = "{{ site.baseurl }}/assets/downloads/schematics-kit.zip"
 
